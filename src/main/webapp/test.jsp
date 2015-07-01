@@ -14,8 +14,8 @@
 <script type="text/javascript" src="resources/js/jquery.min.js"></script> 
 <script type="text/javascript">
 	function calc() {
-	  //var transport = new Thrift.Transport("/test?type=json");
-	  var transport = new Thrift.Transport("http://localhost:9190");
+	  var transport = new Thrift.Transport("/demo/test?type=json");
+	  //var transport = new Thrift.Transport("http://localhost:9190");
 	  var protocol  = new Thrift.Protocol(transport);
 	  var client    = new tutorial.CalculatorClient(protocol);
 
