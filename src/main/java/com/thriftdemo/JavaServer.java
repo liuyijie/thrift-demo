@@ -1,9 +1,12 @@
 package com.thriftdemo;
+import java.net.InetSocketAddress;
+
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TServer.Args;
 import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
+
 
 // Generated code
 import tutorial.Calculator;
@@ -33,7 +36,8 @@ public class JavaServer {
 
 	public static void simple(Calculator.Processor processor) {
 		try {
-			TServerTransport serverTransport = new TServerSocket(9190);
+			TServerTransport serverTransport =
+					new TServerSocket(new InetSocketAddress("localhost",9190));
 			TServer server = new TSimpleServer(
 					new Args(serverTransport).processor(processor));
 

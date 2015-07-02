@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
-    <title> title here</title> 
+    <title>thrift js client</title> 
 <script type="text/javascript" src="resources/js/thrift.js"></script>  
 <script type="text/javascript" src="resources/js/tutorial_types.js"></script> 
 <script type="text/javascript" src="resources/js/shared_types.js"></script>
@@ -15,6 +15,7 @@
 <script type="text/javascript">
 	function calc() {
 	  var transport = new Thrift.Transport("/demo/test?type=json");
+	  //var transport = new Thrift.Transport("http://localhost:89/demo/test?type=json");
 	  //var transport = new Thrift.Transport("http://localhost:9190");
 	  var protocol  = new Thrift.Protocol(transport);
 	  var client    = new tutorial.CalculatorClient(protocol);
