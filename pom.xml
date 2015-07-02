@@ -17,7 +17,6 @@
         <servlet-api.version>2.3</servlet-api.version>
         <slf4j-log4j12.version>1.5.8</slf4j-log4j12.version>
 	</properties>
-	
     <dependencies>
 	    <!-- Spring core -->
 		<dependency>
@@ -45,11 +44,9 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j-log4j12.version}</version>
         </dependency>
-        
     </dependencies>
-    
     <build>
-	<finalName>${name}</finalName>
+		<finalName>${name}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

@@ -24,6 +24,7 @@ import tutorial.Calculator;
 
 @Controller
 public class AgentController {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static Calculator.Processor processor = new Calculator.Processor(new CalculatorHandler());
 
     @RequestMapping(value = "/test")
@@ -45,7 +46,6 @@ public class AgentController {
                 outProtocolFactory = new TCompactProtocol.Factory();  
                 response.setContentType("application/x-thrift");  
             }  
-            System.out.println("-------------------------------------------");
               
             InputStream in = request.getInputStream();  
             OutputStream out = response.getOutputStream();  
